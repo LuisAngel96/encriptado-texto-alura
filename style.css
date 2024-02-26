@@ -1,0 +1,192 @@
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #bbbbbb;
+    font-family: "Averia Sans Libre", sans-serif;
+}
+
+header{
+    padding: 10px 0;
+    position: relative; 
+}
+
+.logoAlura{
+   display: inline-block;
+   margin: 5px 0;
+   
+}
+
+/* CSS PARA seccionPrincipal */
+
+main{
+    width: 940px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.seccionPrincipal{
+    display: flex;
+    width: 940px;
+    height: 680px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.contenedorTexto{
+    box-shadow: 1px 0px 10px 5px black;
+    border-radius: 50px;
+    background-color: #e2d1d1;
+}
+
+#areaTexto{
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    margin: 10px;
+    min-width: 600px;
+    min-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 20px;
+    font-size: 17px;
+    font-family: "Averia Sans Libre", sans-serif;
+    font-size: 22px;
+    border: 2px solid black;
+}
+
+.noMayusculas{
+    display: inline-block;
+    position: absolute;
+    top: 630px;
+    margin: 5px 15px;
+}
+
+.noMayusculas img{
+    display: flex;
+    position: absolute;
+}
+
+.noMayusculas p{
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    font-size: 18px;
+}
+
+.botones{
+    display: flex;
+    position: relative;
+    right: 600px;
+    top: 600px;
+    width: 560px;
+    height: 60px;
+}
+
+.botones input{
+    width: 200px;
+    font-size: 20px;
+    margin: 0 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    border-top-width: 5px;
+    transition: 1s all;
+    font-family: "Averia Sans Libre", sans-serif;
+}
+
+.botones input:hover{
+    
+    border-color:#c71f19;
+}
+
+.botones input:active{
+    border-color: #2c2020;
+    transition: 0.1s;
+    transform: scale(1.15);
+}
+
+/* CSS PARA contenedorImagen */
+
+.contenedorImagen{
+    background-color: #F3F5FC;
+    box-shadow: 1px 0px 10px 5px black;
+    display: inline-block;
+    position: relative;
+    width: 260px;
+    height: 680px;
+    text-align: center;
+    border-radius: 50px;
+    right: 550px;
+}
+
+.contenedorImagen img{
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    margin: 5px;
+    top: 150px;
+}
+
+.contenedorImagen h2{
+    display: inline-block;
+    position: relative;
+    top: 170px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.contenedorImagen p{
+    display: inline-block;
+    position: relative;
+    top: 170px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.botonCopiar{
+    display: flex;
+    position: relative;
+    right: 770px;
+    top: 600px;
+    height: 40px;
+}
+
+.botonCopiar input{
+    width: 100px;
+    font-size: 20px;
+    margin: 0 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    border-top-width: 5px;
+    transition: 1s all;
+    font-family: "Averia Sans Libre", sans-serif;
+}
+
+.botonCopiar input:hover{
+    background-color: #e2d1d1;
+    border-color:#c71f19;
+}
+
+.botonCopiar input:active{
+    border-color: #2c2020;
+    transition: 0.1s;
+    transform: scale(1.15);
+}
+
+footer{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+footer img{
+    width: 10%;
+    border-radius: 10px;
+}
+
+
+
