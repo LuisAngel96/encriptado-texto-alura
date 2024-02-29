@@ -1,21 +1,147 @@
+*{
+    background: #bbbbbb;
+    font-family: "Averia Sans Libre", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    overflow: hidden;
+}
 
+.logoAlura{
+    padding-top: 20px;
+    margin-left: 10px;
+    width: 6%;
+}
 
+main{
+    display: flex;
+    width: 940px;
+    height: 750px;
+    margin: 10px auto;
 
+}
 
+.seccionPrincipal{
+    background: #e2d1d1;
+    margin: 0 auto;
+    border-radius: 50px;
+    border: 2px solid rgb(4, 0, 255);
+    width: ;
+}
 
+.text-area{
+    resize: none;
+    margin: 20px 200px 20px 20px;
+    background: rgba(255, 255, 255, 0.600);
+    min-width: 540px;
+    min-height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 20px;
+}
 
+.text-area:focus{
+    outline: none;
+}
 
+.noMayusculas{
+    margin-left: 20px;
 
+}
 
+.noMayusculas h2{
+     background: #e2d1d1;
+}
 
+.noMayusculas h2::before{
+    content: url(img/Exclamacion.png);
+    margin-right: 5px;
+}
 
+.botones{
+    display: flex;
+    width: 500px;
+    height: 80px;
+    margin: 20px auto;
+    background-color: #e2d1d1;
+    padding-top: 10px;
+}
 
+.btn-encriptar{
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    margin: 0 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    border-top-width: 5px;
+    transition: 1s all;
+}
 
+.btn-encriptar:hover{
+    border-color:#c71f19;
+}
 
+.btn-encriptar:active{
+    border-color: #2c2020;
+    transition: 0.1s;
+    transform: scale(1.15);
+}
 
+.btn-desencriptar{
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    margin: 0 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    border-top-width: 5px;
+    transition: 1s all;
+}
 
+.btn-desencriptar:hover{
+    border-color:#4c568a;
+}
 
+.btn-desencriptar:active{
+    border-color: #0A3871;
+    transition: 0.1s;
+    transform: scale(1.15);
+}
 
+.contenedor-mensaje{
+    border: 2px solid red;
+    border-radius: 50px;
+    background: #D8DFE8;
+    padding-top: 20px;
+    width: 400px;
+    
+}
+
+.mensaje{
+    background: white;
+    background-image: url(img/FiguraEncriptar.png);
+    background-repeat: no-repeat;
+    resize: none;
+    border-radius: 50px;
+    color: #0A3871;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    width: 250px;
+    height: 400px;
+    outline: none;
+}
+
+.mensaje-encontrado{
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 /* CSS PROPIO 
