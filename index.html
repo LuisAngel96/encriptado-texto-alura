@@ -24,27 +24,31 @@
 
         <section class="seccionPrincipal">
 
-            <div class="contenedorTexto">
-                <textarea name="mensaje" id="areaTexto" placeholder="Ingrese el texto aqui:" required></textarea>
-            </div>
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui:" required></textarea>
 
             <div class="noMayusculas">
-                <img src="img/Exclamacion.png" alt="Exclamacion"><p>Solo letras minúsculas y sin acentos.</p>
+                <img src="img/Exclamacion.png" alt="Exclamacion">
+                <p>Solo letras minúsculas y sin acentos.</p>
             </div>
 
             <div class="botones">
-                <input type="button" value="Encriptar">
-                <input type="button" value="Desencriptar">
+                <button class="btn-encriptar">Encriptar</button>
+                <button class=btn-desencriptar>Desencriptar</button>
             </div>
 
-            <div class="contenedorImagen">
-                <img src="img/FiguraEncriptar.png" alt="Figura Encriptar">
+        </section>
+
+        <section>
+
+            <textarea class="mensaje" cols="30" rows="10"></textarea>
+
+            <div class="mensaje-encontrado">
                 <h2>Ningún mensaje fue encontrado:</h2>
                 <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
 
             <div class="botonCopiar">
-                <input type="button" value="Copiar">
+                <button class="btn-copiar">Copiar</button>
             </div>
 
         </section>
@@ -53,6 +57,7 @@
 
     <footer>
         <img src="img/LMT_Developer.jpeg" alt="Logo LMT">
+        <img src="img/github-mark.png" alt="Logo Github">
         <p>&copy Copyright LMT Developer</p>
     </footer>
     

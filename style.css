@@ -1,3 +1,25 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS PROPIO 
+
 body{
     width: 100%;
     display: flex;
@@ -18,7 +40,7 @@ header{
    
 }
 
-/* CSS PARA seccionPrincipal */
+CSS PARA seccionPrincipal 
 
 main{
     width: 940px;
@@ -107,7 +129,7 @@ main{
     transform: scale(1.15);
 }
 
-/* CSS PARA contenedorImagen */
+ CSS PARA contenedorImagen 
 
 .contenedorImagen{
     background-color: #F3F5FC;
@@ -188,5 +210,6 @@ footer img{
     border-radius: 10px;
 }
 
+*/
 
 
