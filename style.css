@@ -34,8 +34,9 @@ main{
 }
 
 .text-area{
+    display: flex;
     resize: none;
-    margin: 20px 200px 20px 20px;
+    margin: 20px auto;
     background: rgba(255, 255, 255, 0.600);
     min-width: 535px;
     min-height: 500px;
@@ -190,6 +191,15 @@ main{
     transform: scale(1.15);
 }
 
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    gap: 1.2rem;
+
+}
 /* CSS PROPIO 
 
 body{
