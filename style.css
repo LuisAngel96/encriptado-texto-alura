@@ -8,9 +8,10 @@
 }
 
 .logoAlura{
-    padding-top: 15px;
-    margin-left: 10px;
-    width: 5%;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 120px;
 }
 
 main{
@@ -133,14 +134,14 @@ main{
 }
 
 .mensaje{
-    background: white;
+    background: #D8DFE8;
     background-image: url(img/FiguraEncriptar.png);
     background-repeat: no-repeat;
     background-position: center;
     resize: none;
     border-radius: 50px;
     color: #0A3871;
-    margin: 20px 10px;
+    margin: 20px 5px;
     margin-bottom: 20px;
     padding-top: 20px;
     padding-left: 20px;
@@ -149,7 +150,8 @@ main{
     width: 250px;
     height: 400px;
     outline: none;
-    
+    pointer-events: none;
+
 }
 
 .mensaje-encontrado{
