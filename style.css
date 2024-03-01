@@ -221,6 +221,73 @@ footer p{
     background-color: #bbbbbb ;
 }
 
+/* Media queries */
+@media screen and (min-width: 1367px){
+
+    .seccionPrincipal, footer{
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .text-area{
+        width: 68%;
+    }
+
+    .seccionSecundaria{
+        width: 42%;
+        margin: auto auto auto 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 2rem;
+        padding-top: 20px;
+        height: 1000px;
+    }
+
+    .seccionPrincipal{
+        width: 700px;
+        height: 400px;
+        margin: 0 20px;
+    }
+
+    .text-area{
+        min-width: 600px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+
+    .seccionSecundaria{
+        
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        width: 700px;
+        height: 220px;
+       
+    }
+
+    .mensaje{
+        display: none;
+    }
+
+    .mensaje-encontrado{
+        width: 700px;
+    }
+
+    .botonCopiar{
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
 /* CSS PROPIO 
 
 body{
