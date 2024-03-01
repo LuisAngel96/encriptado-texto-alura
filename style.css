@@ -241,25 +241,26 @@ footer p{
 
 @media screen and (max-width: 768px){
     
+
     main{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-top: 2rem;
+        margin-top: 10px;
         padding-top: 20px;
-        height: 1000px;
+        height: 850px;
     }
 
     .seccionPrincipal{
         width: 700px;
-        height: 400px;
+        height: 530px;
         margin: 0 20px;
     }
 
     .text-area{
         min-width: 600px;
         max-height: 150px;
-        min-height: 150px;
+        min-height: 300px;
     }
 
     .seccionSecundaria{
@@ -268,22 +269,31 @@ footer p{
         margin-right: 20px;
         margin-top: 20px;
         width: 700px;
-        height: 220px;
-       
+        height: 270px;
     }
 
     .mensaje{
-        display: none;
+        background-image: none;
+        border: 2px solid;
+        width: 600px;
+        height: 80px;
+        margin: 20px 27px 0 27px;
     }
 
     .mensaje-encontrado{
+        margin-top: 5px;
         width: 700px;
+        line-height: 10px;
     }
 
     .botonCopiar{
         margin: auto;
-        width: 100px;
-        height: 100px;
+        width: 100px;  
+    }
+
+    footer{
+        margin: auto;
+        
     }
 
 }
