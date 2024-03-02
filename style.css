@@ -64,6 +64,7 @@ main{
 .noMayusculas h2::before{
     content: url(img/Exclamacion.png);
     margin-right: 5px;
+    background: #e2d1d1;
 }
 
 .botones{
@@ -140,7 +141,6 @@ main{
     background-position: center;
     resize: none;
     border-radius: 50px;
-    color: #0A3871;
     margin: 20px 5px;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -158,6 +158,7 @@ main{
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
+    background: #D8DFE8;
 }
 
 .mensaje-encontrado h3,p{
@@ -190,7 +191,7 @@ main{
 
 .btn-copiar:active{
     transition: 0.1s;
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 
 
@@ -224,13 +225,20 @@ footer p{
 /* Media queries */
 @media screen and (min-width: 1367px){
 
-    .seccionPrincipal, footer{
+    .seccionPrincipal{
+        background: #e2d1d1;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    footer{
         max-width: 1440px;
         margin: auto;
     }
 
     .text-area{
-        width: 68%;
+        
+        width: 80%;
     }
 
     .seccionSecundaria{
@@ -258,6 +266,7 @@ footer p{
     }
 
     .text-area{
+        background: #D8DFE8;
         min-width: 600px;
         max-height: 150px;
         min-height: 300px;
@@ -289,12 +298,15 @@ footer p{
     .botonCopiar{
         margin: auto;
         width: 100px;  
+        padding: 0 30px;
     }
 
     footer{
         margin: auto;
-        
     }
+
+    
+    
 
 }
 
