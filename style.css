@@ -4,7 +4,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .logoAlura{
@@ -150,8 +150,6 @@ main{
     width: 250px;
     height: 400px;
     outline: none;
-    pointer-events: none;
-
 }
 
 .mensaje-encontrado{
