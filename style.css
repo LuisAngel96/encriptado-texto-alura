@@ -222,57 +222,49 @@ footer p{
     background-color: #bbbbbb ;
 }
 
-/* Media queries pantalla de 1024px o mas */
+/* Media queries para celulares, pantalla desde 400px a 600px */
 
-@media screen and (min-width: 1024px) {
-    
+@media(min-width:400px) and (max-width:599px){
+
     main{
-        width: 80%;
+        margin: 0;
+        padding: 30px 30px 20px 0;
+        min-width: 90%;
+        max-width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 110%;
     }
 
     .seccionPrincipal{
-        width: 70%;
+        min-width: 85%;
+        max-width: 90%;
+        min-height: 50%;
+        max-height: 90%;
+        margin-bottom: 20px;
     }
 
     .text-area{
-        min-width: 90%;
-        min-height: 68%;
-        max-width: 90%;
-        max-height: 68%;
+        min-width: 70%;
+        max-width: 80%;
+        min-height: 20%;
+        max-height: 40%;
     }
 
     .botones{
-       display: flex;
-       justify-content: center;
-       width: 100%;       
+        display: flex;
+        flex-direction: row; 
+        width: 100%;
     }
 
     .btn-encriptar, .btn-desencriptar{
-        width: 30%;
-        
+        min-width: 40%;
+        max-width: 40%;
+        padding: 0 10px;
+        margin: 0 18px;
+        font-size: 100%;
     }
-
-    .seccionSecundaria{
-        width: 30%;
-    }
-
-    .mensaje-encontrado{
-        width: 100%;
-    }
-
-    .botonCopiar{
-        width: 100%;
-    }
-
-    .mensaje{ 
-        min-width: 82%;     
-        max-width: 82%;
-        min-height: 50%;
-        max-height: 55%;
-    }
-
-    footer{
-        width: 100%;
-    }
-   
 }
+
+
