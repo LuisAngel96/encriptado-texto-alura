@@ -222,13 +222,12 @@ footer p{
     background-color: #bbbbbb ;
 }
 
+/* Media queries pantalla de 1024px o mas */
 
-/* Media queries pantalla de 1440px o mas*/
-
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
     
     main{
-        width: 70%;
+        width: 80%;
     }
 
     .seccionPrincipal{
@@ -276,62 +275,4 @@ footer p{
         width: 100%;
     }
    
-}
-
-/* Media queries pantalla de 768px o mas*/
-
-@media screen and (min-width: 768px) {
-
-
-    main{
-        width: 70%;
-    }
-    
-    .seccionPrincipal{
-        width: 70%;
-    }
-
-    .text-area{
-        min-width: 83%;
-        min-height: 68%;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .botones{
-       display: flex;
-       justify-content: center;
-       width: 100%; 
-           
-    }
-
-    .btn-encriptar, .btn-desencriptar{
-        min-width: 40%;
-        max-width: 100%;
-        margin: 0 15px;
-    
-    }
-
-    .seccionSecundaria{
-        width: 30%;
-    }
-
-    .mensaje-encontrado{
-        width: 100%;
-    }
-
-    .botonCopiar{
-        width: 100%;
-    }
-
-    .mensaje{ 
-        min-width: 82%;     
-        max-width: 82%;
-        min-height: 50%;
-        max-height: 55%;
-    }
-
-    footer{
-        width: 100%;
-    }
 }
