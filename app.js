@@ -1,6 +1,7 @@
 const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
 const textoNingun = document.querySelector(".mensaje-encontrado");
+const btnCopiar = document.querySelector(".btn-copiar");
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -8,14 +9,12 @@ const textoNingun = document.querySelector(".mensaje-encontrado");
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
-
 function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
     textoNingun.style.visibility = "hidden";
-
 }
 
 function encriptar(stringEncriptada){
@@ -51,6 +50,18 @@ function desencriptar(stringDesencriptado){
         }
     }
     return stringDesencriptado;
-
-    
 }
+
+const copiar = () => {
+    mensaje.select();
+    mensaje.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(mensaje.value);
+};
+  
+btnCopiar.addEventListener("click", () => {
+    copiar();
+    mensaje.value = "";
+    mensaje.style.backgroundImage = "";
+    textoNingun.style.visibility = "";
+  });
+  
