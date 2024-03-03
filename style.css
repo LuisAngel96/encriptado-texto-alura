@@ -231,6 +231,7 @@ footer p{
         padding: 30px 30px 20px 0;
         min-width: 90%;
         max-width: 95%;
+        height: 95%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -240,9 +241,11 @@ footer p{
     .seccionPrincipal{
         min-width: 85%;
         max-width: 90%;
-        min-height: 50%;
-        max-height: 90%;
+        min-height: 5%;
+        max-height: 400px;
         margin-bottom: 20px;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .text-area{
@@ -264,6 +267,50 @@ footer p{
         padding: 0 10px;
         margin: 0 18px;
         font-size: 100%;
+    }
+
+    .seccionSecundaria{
+        display: flex;
+        flex-direction: column;
+        width: 92%;
+        max-height: 310px;
+        margin: 0 auto;
+        margin-right: 0;
+
+    }
+
+    .mensaje{
+        border: 2px solid rgba(0, 0, 0, 0.281);
+        min-width: 85%;
+        max-width: 80%;
+        min-height: 20%;
+        max-height: 30%;
+        background-image: none;
+        margin-bottom: 5px;
+        
+    }
+
+    .mensaje-encontrado{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .botonCopiar{
+        margin-top: 0;
+    }
+
+    .btn-copiar{
+        width: 30%;
+        height: 60%;
+    }
+
+    footer{
+        width: 100%;
+        justify-content: center;
+
     }
 }
 
