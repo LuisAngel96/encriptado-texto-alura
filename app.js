@@ -9,12 +9,23 @@ const btnCopiar = document.querySelector(".btn-copiar");
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
+const showTextarea = () => {
+    if (textArea.value === "") {
+        mensaje.style.backgroundImage = "";
+        textoNingun.style.visibility = "";
+    } 
+    else {
+            mensaje.style.backgroundImage = "none";
+            textoNingun.style.visibility = "hidden";
+    }
+}
+
 function btnEncriptar(){
+    showTextarea();
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
-    mensaje.style.backgroundImage = "none";
-    textoNingun.style.visibility = "hidden";
+    
 }
 
 function encriptar(stringEncriptada){
@@ -32,11 +43,10 @@ function encriptar(stringEncriptada){
 }
 
 function btnDesencriptar(){
+    showTextarea();
     const textoEncriptado = desencriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
-    mensaje.style.backgroundImage = "none";
-    textoNingun.style.visibility = "hidden";
 }
 
 function desencriptar(stringDesencriptado){
@@ -60,8 +70,7 @@ const copiar = () => {
   
 btnCopiar.addEventListener("click", () => {
     copiar();
+    showTextarea();
     mensaje.value = "";
-    mensaje.style.backgroundImage = "";
-    textoNingun.style.visibility = "";
   });
   
