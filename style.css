@@ -4,7 +4,6 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
-    overflow: hidden;
 }
 
 .logoAlura{
@@ -21,7 +20,6 @@ main{
     margin: 0 auto;
     padding-right: 20px;
     padding-left: 20px;
-
 }
 
 .seccionPrincipal{
@@ -31,7 +29,8 @@ main{
     margin-right: 5px;
     height: 750px;
     width: 800px;
-    box-shadow: 1px 0px 15px 5px black
+    box-shadow: 1px 0px 15px 5px black;
+    overflow: hidden;
 }
 
 .text-area{
@@ -46,7 +45,6 @@ main{
     border: 2px solid black;
     border-radius: 50px;
     padding: 20px;
-    overflow: auto;
 }
 
 .text-area:focus{
@@ -133,6 +131,7 @@ main{
     margin: auto;
     box-shadow: 1px 0px 15px 2px black;
     margin-left: 5px;
+    overflow: hidden;
 }
 
 .mensaje{
