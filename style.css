@@ -226,12 +226,17 @@ footer p{
 
 @media(min-width:400px) and (max-width:599px){
 
+    header{
+        display: flex;
+        width: 25%;
+    }
+
     main{
         margin: 0;
         padding: 30px 30px 20px 0;
         min-width: 90%;
         max-width: 95%;
-        height: 95%;
+        height: 700px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -260,6 +265,7 @@ footer p{
         display: flex;
         flex-direction: row; 
         width: 100%;
+        padding-top: 0;
     }
 
     .btn-encriptar, .btn-desencriptar{
