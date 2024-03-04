@@ -25,7 +25,6 @@ function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
-    
 }
 
 function encriptar(stringEncriptada){
@@ -70,7 +69,15 @@ const copiar = () => {
   
 btnCopiar.addEventListener("click", () => {
     copiar();
-    showTextarea();
+    showTextarea(); 
     mensaje.value = "";
   });
   
+/* function textoCopiado () {
+        
+        if (btnCopiar.innerText == "Copiar"){
+            btnCopiar.innerText = "Copiado";
+        } else { 
+            btnCopiar.innerText = "Copiar"}
+    } 
+*/
