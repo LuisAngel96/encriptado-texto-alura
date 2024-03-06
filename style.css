@@ -247,6 +247,100 @@ body{
 
 /* ------------------------- Media Queries --------------------------- */
 
+/* Media queries para celulares, pantallas mayores que 375px e iguales o menores que 599px */
+
+@media(min-width:320px) and (max-width:599px){
+
+    .header-logo{
+        width: 2svh;
+        height: 4svh;
+    }
+
+    .encoder-container{
+        border: 2px solid green;
+        width: 95%;
+        margin: auto;
+        height: 80svh;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        font-size: 1.8svh;
+        align-items: center;  
+    }
+
+    /* ------------------------- Encrypt Section --------------------------- */
+    .encrypt-section{
+        justify-content: center;
+        width: 90%;
+        height: 75%;
+        margin: 1svh;
+    }
+
+    .encrypt-area{
+        width: 90%;
+        height: 95%;
+    }
+
+    .encoder-alert{
+        width: 95%;
+    }
+
+    .buttons{
+        width: 95%;
+    }
+
+    /* ------------------------- Decrypt Section --------------------------- */
+    .decrypt-section{
+        justify-content: center;
+        width: 90%;
+        height: 35%;
+        margin: 1svh;
+    }
+
+    .decrypt-area{
+        width: 90%;
+        height: 90%;
+    }
+
+    .decrypt-text{
+       
+        border: 2px solid blue;
+        background-image: none;
+        margin: 0;
+    }
+
+    .decrypt-input{
+        display: inline-block;
+        position: relative;
+        top: -2svh;
+        vertical-align: top;
+        width: 90%;
+        height: 10%;
+    }
+
+    .decrypt-input h2{
+        width: 100%;
+        height: 3svh;
+        margin-bottom: 1svh;      
+    }
+
+    .decrypt-input p{
+        width: 100%;
+        height: 3svh;
+    }
+
+    .button-copy{
+        width: 50%;
+    }
+
+    /* ------------------------- Footer --------------------------- */
+    .footer{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
 /* Media queries para tablets, pantallas mayores que 600px e iguales o menores que 1024px */
 
 @media(min-width:600px) and (max-width:1024px){
