@@ -1,7 +1,7 @@
-const textArea = document.querySelector(".text-area");
-const mensaje = document.querySelector(".mensaje");
-const textoNingun = document.querySelector(".mensaje-encontrado");
-const btnCopiar = document.querySelector(".btn-copiar");
+const encryptText = document.querySelector(".encrypt-text");
+const decryptText = document.querySelector(".decrypt-text");
+const decryptInput = document.querySelector(".decrypt-input");
+const btnCopy = document.querySelector(".btn-copy");
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -9,68 +9,102 @@ const btnCopiar = document.querySelector(".btn-copiar");
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
 
-const showTextarea = () => {
-    if (textArea.value === "") {
-        mensaje.style.backgroundImage = "";
-        textoNingun.style.visibility = "";
+const showText = () => {
+    if (encryptText.value === "") {
+        decryptText.style.backgroundImage = "";
+        decryptInput.style.visibility = "";
     } 
     else {
-            mensaje.style.backgroundImage = "none";
-            textoNingun.style.visibility = "hidden";
+            decryptText.style.backgroundImage = "none";
+            decryptInput.style.visibility = "hidden";
     }
 }
 
-function btnEncriptar(){
-    showTextarea();
-    const textoEncriptado = encriptar(textArea.value);
-    mensaje.value = textoEncriptado;
-    textArea.value = "";
+/* ------------------------- Encrypt Function --------------------------- */
+
+function btnEncrypt(){
+    textExclamation();
+    showText();
+    const textEncrypt = encrypt(encryptText.value);
+    decryptText.value = textEncrypt;
+    encryptText.value = "";
+}
+
+function encrypt(stringEncrypt){
+
+    let matrixCode = [["u", "ufat"], ["i", "imes"], ["e", "enter"], ["o", "ober"], ["a", "ai"]];
+
+    stringEncrypt = stringEncrypt.toLowerCase();
+
+    for(let i = 0; i < matrixCode.length; i++){
+        if(stringEncrypt.includes(matrixCode[i][0])){
+            stringEncrypt = stringEncrypt.replaceAll(matrixCode[i][0], matrixCode[i][1]) ;
+        }
+    }
+    return stringEncrypt;
+}
+
+/* ------------------------- Decrypt Function --------------------------- */
+
+function btnDecrypt(){
+    textExclamation();
+    showText();
+    const textEncrypt = decrypt(encryptText.value);
+    decryptText.value = textEncrypt;
+    encryptText.value = "";
+}
+
+function decrypt(stringDecrypt){
+
+    let matrixCode = [["u", "ufat"], ["i", "imes"], ["e", "enter"], ["o", "ober"], ["a", "ai"]];
+    stringDecrypt = stringDecrypt.toLowerCase();
+
+    for(let i = 0; i < matrixCode.length; i++){
+        if(stringDecrypt.includes(matrixCode[i][1])){
+            stringDecrypt = stringDecrypt.replaceAll(matrixCode[i][1], matrixCode[i][0]);
+        }
+    }
+    return stringDecrypt;
+}
+
+/* ------------------------- Copy Function --------------------------- */
+
+function copy() {
     
-}
+    const decryptTextValue = decryptText.value;
+    navigator.clipboard.writeText(decryptTextValue);
 
-function encriptar(stringEncriptada){
+    if (decryptText.value === "") {
+        decryptText.style.backgroundImage = "";
+        decryptInput.style.visibility = "";
+        decryptText.value = "";
+        
+    } else if (decryptText.value != "") {
 
-    let matrizCodigo = [["u", "ufat"], ["i", "imes"], ["e", "enter"], ["o", "ober"], ["a", "ai"]];
+        decryptText.style.backgroundImage = "";
+        decryptInput.style.visibility = "";
+        decryptText.value = "";
 
-    stringEncriptada = stringEncriptada.toLowerCase();
+    } else {
 
-    for(let i = 0; i < matrizCodigo.length; i++){
-        if(stringEncriptada.includes(matrizCodigo[i][0])){
-            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]) ;
-        }
+        decryptText.style.backgroundImage = "none";
+        decryptInput.style.visibility = "hidden";
+        decryptText.value = "";
+        
     }
-    return stringEncriptada;
 }
 
-function btnDesencriptar(){
-    showTextarea();
-    const textoEncriptado = desencriptar(textArea.value);
-    mensaje.value = textoEncriptado;
-    textArea.value = "";
+
+function textExclamation() {
+    const textChange = encryptText.value;
+    var regex = /^[a-z\s\d!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]+$/; // Letras minúsculas, espacios y otros caracteres especiales.
+    if (!regex.test(textChange)) {
+        
+        alert('El texto debe contener solo letras minúsculas, sin acentos ni mayúsculas.');
+        encryptText.value = "";
+    }         
 }
 
-function desencriptar(stringDesencriptado){
 
-    let matrizCodigo = [["u", "ufat"], ["i", "imes"], ["e", "enter"], ["o", "ober"], ["a", "ai"]];
-    stringDesencriptado = stringDesencriptado.toLowerCase();
 
-    for(let i = 0; i < matrizCodigo.length; i++){
-        if(stringDesencriptado.includes(matrizCodigo[i][1])){
-            stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
-        }
-    }
-    return stringDesencriptado;
-}
 
-const copiar = () => {
-    mensaje.select();
-    mensaje.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(mensaje.value);
-};
-  
-btnCopiar.addEventListener("click", () => {
-    copiar();
-    showTextarea();
-    mensaje.value = "";
-  });
-  

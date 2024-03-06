@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de textos</title>
+    <title>Encriptador de texto</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre&family=Montserrat&display=swap" rel="stylesheet">
-
 </head>
-<body>
+
+<body class="body-container">
 
     <header>
 
-        <h1 class="logoAlura"><img src="img/Logo.png" alt="Logo ALura"></h1>
+        <div class="header-logo">
+            <img src="img/Logo Alura.png" alt="Logo Alura">
+        </div>
         
     </header>
+    
+    <main class="encoder-container">
 
-    <main>
+        <section class="encrypt-section">
 
-        <section class="seccionPrincipal">
+            <div class="encrypt-area">
 
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui:" required></textarea>
+                <textarea class="encrypt-text" placeholder="Ingrese el texto aqui:"></textarea>
 
-            <div class="noMayusculas">
-                <h2>Solo letras minúsculas y sin acentos.</h2>
-            </div>
+                <div class="encoder-alert">
+                    <img src="img/Exclamacion.png" alt="Alerta">
+                    <p class="text-alerta"> Solo letras minúsculas y sin acentos.</p>
+                </div>
 
-            <div class="botones">
-                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class=btn-desencriptar onclick="btnDesencriptar()">Desencriptar</button>
+                <div class="buttons">
+                    <button class="btn-encrypt" onclick="btnEncrypt()">Encriptar</button>
+                    <button class="btn-decrypt" onclick="btnDecrypt()">Desencriptar</button>
+                </div>
+
             </div>
 
         </section>
 
-        <section class="seccionSecundaria">
+        <section class="decrypt-section">
 
-            <textarea disabled class="mensaje" cols="30" rows="10"></textarea>
+            <div class="decrypt-area">
 
-            <div class="mensaje-encontrado">
-                <h3>Ningún mensaje fue encontrado.</h3>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>
+                <textarea disabled class="decrypt-text"></textarea>
 
-            <div class="botonCopiar">
-                <button class="btn-copiar">Copiar</button>
+                <div class="decrypt-input">
+                    <h2>Ningun mensaje ha sido encontrado.</h2>
+                    <p>Ingresa el texto que desees  encriptar o desencriptar.</p>
+                </div>
+
+                <div class="button-copy">
+                    <button class="btn-copy" onclick="copy()">Copiar</button>
+                </div>
+
             </div>
 
         </section>
 
     </main>
+    
+    <footer class="contact">
 
-    <footer>
-        <p>&copy Copyright LMT Developer</p>
-        <img class="imagen-lmt" src="img/LMT_Developer.jpeg" alt="Logo LMT">
-        <a  href="https://github.com/LuisAngel96">
-            <img class="imagen-git" src="img/github-mark.png" alt="Logo Github"></a>
+        <p>&copy Copyright Luis A. Martinez</p>
+        <a href="https://co.linkedin.com/in/luis-angel-frontend?trk=people-guest_people_search-card"><img class="linkeind" src="img/linkedin logo.png" alt="Logo linkedin"></a>
+        <a href="https://github.com/LuisAngel96"><img class="github" src="img/github-mark.png" alt="Logo github"></a>
         
     </footer>
-    
+
     <script src="app.js"></script>
 
 </body>

@@ -1,419 +1,429 @@
-*{
+body{
     background: #bbbbbb;
     font-family: "Averia Sans Libre", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 150%;
-    overflow: hidden;
 }
 
-.logoAlura{
+/* ------------------------- Header ------------------------- */
+
+.header-logo{
     display: flex;
-    margin-top: 15px;
-    margin-left: 15px;
-    width: 120px;
+    margin: 2svh 0 1svh 0;
+    height: 5svh;
 }
 
-main{
+/* ------------------------- Main --------------------------- */
+
+.encoder-container{
     display: flex;
-    width: 940px;
-    height: 800px;
-    margin: 0 auto;
-    padding-right: 20px;
-    padding-left: 20px;
-
+    height: 80svh;
+    justify-content: center;
 }
 
-.seccionPrincipal{
+/* -------- Encrypt Section -------- */
+
+.encrypt-section{
+    display: flex;
+    margin: 2svh;
+    height: 75%; 
+}
+
+.encrypt-area{
+    display: flex;
+    flex-direction: column;
     background: #e2d1d1;
-    margin: auto;
-    border-radius: 50px;
-    margin-right: 5px;
-    height: 750px;
-    width: 800px;
-    box-shadow: 1px 0px 15px 5px black
+    width: 60svh;
+    height: 73svh;  
+    border-radius: 5svh;
+    padding: 1.5svh;
+    box-shadow: 1px 0px 15px 5px black;  
 }
 
-.text-area{
-    display: flex;
-    resize: none;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.600);
-    min-width: 535px;
-    min-height: 500px;
-    max-width: 500px;
-    max-height: 500px;
+.encrypt-text{
     border: 2px solid black;
-    border-radius: 50px;
-    padding: 20px;
+    height: 80%;
+    border-radius: 5svh;
+    padding: 2svh;
+    resize: none;
+    font-family: "Averia Sans Libre", sans-serif;
+    background: rgba(255, 255, 255, 0.600);
+    font-size: 1.8svh;
     overflow: auto;
 }
 
-.text-area:focus{
+.encrypt-text:focus{
     outline: none;
+    background-color: #D8DFE8;
 }
 
-.noMayusculas{
-    margin-left: 20px;
-
-}
-
-.noMayusculas h2{
-     background: #e2d1d1;
-}
-
-.noMayusculas h2::before{
-    content: url(img/Exclamacion.png);
-    margin-right: 5px;
-    background: #e2d1d1;
-}
-
-.botones{
-    display: flex;
-    width: 500px;
-    height: 80px;
-    margin: 20px auto;
-    background-color: #e2d1d1;
-    padding-top: 10px;
-}
-
-.btn-encriptar{
-    width: 200px;
-    height: 70px;
-    font-size: 20px;
-    margin: 0 40px;
-    border: 2px solid black;
-    border-radius: 20px;
-    border-top-width: 5px;
-    transition: 1s all;
+.encrypt-text:hover{
     cursor: pointer;
+    background-color: #D8DFE8;
 }
 
-.btn-encriptar:hover{
+.encoder-alert{
+    display: flex;
+    align-items: center;
+    gap: 0.5svh;
+    width: 50svh;
+    font-size: 1.8svh;
+    margin: 1svh;
+}
+
+.encoder-alert img{
+    width: 1.7svh;
+}
+
+
+.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5svh;
+    margin: 1svh;
+}
+
+.btn-encrypt{
+    width: 20svh;
+    height: 6svh;
+    font-family: "Averia Sans Libre", sans-serif;
+    font-size: 1.8svh;
+    border: 0.3svh solid black;
+    border-radius: 10svh;
+    border-top-width: 0.7svh;
+    cursor: pointer;
+    transition: 1s all;
+    background: #bbbbbb;
+}
+
+.btn-encrypt:hover{
     border-color:#c71f19;
     background-color: #c71f190c;
+    transform: rotate(3deg);
 }
 
-.btn-encriptar:active{
+.btn-encrypt:active{
     border-color: #2c2020;
     background-color: #2c20202c;
     transition: 0.1s;
     transform: scale(1.15);
 }
 
-.btn-desencriptar{
-    width: 200px;
-    height: 70px;
-    font-size: 20px;
-    margin: 0 40px;
-    border: 2px solid black;
-    border-radius: 20px;
-    border-top-width: 5px;
-    transition: 1s all;
+.btn-decrypt{
+    width: 20svh;
+    height: 6svh;
+    font-family: "Averia Sans Libre", sans-serif;
+    font-size: 1.8svh;
+    border: 0.3svh solid black;
+    border-radius: 10svh;
+    border-top-width: 0.7svh;
     cursor: pointer;
+    transition: 1s all;
+    background: #bbbbbb;
 }
 
-.btn-desencriptar:hover{
+.btn-decrypt:hover{
     border-color:#4c568a;
     background-color: #4c568a33;
+    transform: rotate(-3deg);
 }
 
-.btn-desencriptar:active{
+.btn-decrypt:active{
     border-color: #0A3871;
     background-color: #0a387131;
     transition: 0.1s;
     transform: scale(1.15);
 }
 
-.seccionSecundaria{
-    border-radius: 50px;
-    background: #D8DFE8;
-    width: 400px;
-    height: 750px;
-    margin: auto;
-    box-shadow: 1px 0px 15px 2px black;
-    margin-left: 5px;
+/* -------- Decrypt Section -------- */
+
+.decrypt-section{
+    display: flex;
+    margin: 2svh 2svh 2svh 0;
+    height: 75%;
 }
 
-.mensaje{
+.decrypt-area{
+    display: flex;
+    flex-direction: column;
+    background: #D8DFE8;
+    width: 25svh;
+    height: 73svh;  
+    border-radius: 5svh;
+    padding: 1.5svh;
+    box-shadow: 1px 0px 15px 5px black;
+    align-items: center;
+}
+
+.decrypt-text{
     background: #D8DFE8;
     background-image: url(img/FiguraEncriptar.png);
+    resize: none;
+    border: none;
+    width: 85%;
+    height: 60%;
+    border-radius: 5svh;
+    outline: none;
     background-repeat: no-repeat;
     background-position: center;
-    resize: none;
-    border-radius: 50px;
-    margin: 20px 5px;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: none;
-    width: 250px;
-    height: 400px;
-    outline: none;
-    overflow: auto;
+    background-size: 30svh;
+    padding: 2svh;
+    font-size: 1.8svh;
+    font-family: "Averia Sans Libre", sans-serif;
+    cursor:auto;
 }
 
-.mensaje-encontrado{
+.decrypt-input{
     text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    background: #D8DFE8;
+    line-height: 2svh;
+    gap: 0.5svh;
+    width: 25svh;
+    font-size: 1.8svh;
+    margin: 3svh;
 }
 
-.mensaje-encontrado h3,p{
-    background: #D8DFE8;
-    padding: 5px;
-
-}
-
-.botonCopiar{
+.button-copy{
     display: flex;
-    width: 300px;
-    height: 90px;
-    background: #D8DFE8;
-    margin: auto;
-    margin-top: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5svh;
+    margin: 1svh;
 }
 
-.btn-copiar{
-    width: 200px;
-    height: 70px;
-    font-size: 20px;
-    margin: auto;
-    border: 2px solid black;
-    border-radius: 20px;
-    border-top-width: 5px;
-    transition: 1s all;
+.btn-copy{
+    width: 20svh;
+    height: 6svh;
+    font-family: "Averia Sans Libre", sans-serif;
+    font-size: 1.8svh;
+    border: 0.3svh solid black;
+    border-radius: 10svh;
+    border-top-width: 0.7svh;
     cursor: pointer;
+    transition: 1s all;
+    background: #bbbbbb;
 }
 
+.btn-copy:hover{
+    border-color:#0A3871;
+    background-color: #0a487134;
+}
 
-.btn-copiar:active{
+.btn-copy:active{
     transition: 0.1s;
     transform: scale(1.05);
 }
 
+/* ------------------------- Footer --------------------------- */
 
-footer{
-    margin: 5px auto;
+.contact{
     display: flex;
-    align-items: center;
+    width: 100%;
+    height: 5svh;
     justify-content: center;
-    height: 50px;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1svh;
 }
 
-footer{
-    font-family: "Averia Sans Libre", sans-serif;
+.contact p{
+    font-size: 1.8svh;
 }
 
-.imagen-git{
-    width: 30px;
+.linkeind{
+    height: 3svh;
 }
 
-.imagen-lmt{
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
+.linkeind:hover{
+    transform: scale(1.1);
 }
 
-footer p{
-    background-color: #bbbbbb ;
+.github{
+    height: 3svh;
 }
 
-/* Media queries para celulares, pantalla desde 375px a 600px */
+.github:hover{
+    transform: scale(1.1);
+}
 
-@media(min-width:375px) and (max-width:599px){
+/* ------------------------- Media Queries --------------------------- */
 
-    header{
-        display: flex;
-        width: 25%;
+/* Media queries para celulares, pantallas mayores que 375px e iguales o menores que 599px */
+
+@media(min-width:320px) and (max-width:599px){
+
+    .header-logo{
+        width: 2svh;
+        height: 4svh;
     }
 
-    main{
-        margin: 0;
-        padding: 30px 30px 20px 0;
-        min-width: 90%;
-        max-width: 95%;
-        height: 680px;
+    .encoder-container{
+        border: 2px solid green;
+        width: 95%;
+        margin: auto;
+        height: 80svh;
         display: flex;
         flex-direction: column;
+        margin: auto;
+        font-size: 1.8svh;
+        align-items: center;  
+    }
+
+    /* ------------------------- Encrypt Section --------------------------- */
+    .encrypt-section{
         justify-content: center;
-        font-size: 110%;
-        padding-bottom: 10px;
-        margin-bottom: 0px;
+        width: 90%;
+        height: 75%;
+        margin: 1svh;
     }
 
-    .seccionPrincipal{
-        min-width: 85%;
-        max-width: 90%;
-        min-height: 5%;
-        max-height: 400px;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding-top: 0;
+    .encrypt-area{
+        width: 90%;
+        height: 95%;
     }
 
-    .text-area{
-        min-width: 85%;
-        max-width: 85%;
-        min-height: 20%;
-        max-height: 40%;
+    .encoder-alert{
+        width: 95%;
     }
 
-    .botones{
-        display: flex;
-        flex-direction: row; 
-        width: 100%;
-        padding-top: 0;
-        margin-top: 10px;
+    .buttons{
+        width: 95%;
     }
 
-    .btn-encriptar, .btn-desencriptar{
-        min-width: 40%;
-        max-width: 100%;
-        padding: 0 10px;
-        margin: 0 18px;
-        margin-top: 5px;
-        font-size: 100%;
+    /* ------------------------- Decrypt Section --------------------------- */
+    .decrypt-section{
+        justify-content: center;
+        width: 90%;
+        height: 35%;
+        margin: 1svh;
     }
 
-    .seccionSecundaria{
-        display: flex;
-        flex-direction: column;
-        width: 92%;
-        max-height: 310px;
-        margin: 0 auto;
-        margin-right: 0;
+    .decrypt-area{
+        width: 90%;
+        height: 90%;
     }
 
-    .mensaje{
-        border: 2px solid rgba(0, 0, 0, 0.281);
-        min-width: 85%;
-        max-width: 80%;
-        min-height: 20%;
-        max-height: 30%;
+    .decrypt-text{
+       
+        border: 2px solid blue;
         background-image: none;
-        margin-bottom: 5px;
-    }
-
-    .mensaje-encontrado{
-        display: flex;
-        flex-direction: column;
-        font-size: 15px;
-        padding: 0;
         margin: 0;
     }
 
-    .mensaje-encontrado h3{
-        padding-bottom: 0;
+    .decrypt-input{
+        display: inline-block;
+        position: relative;
+        top: -2svh;
+        vertical-align: top;
+        width: 90%;
+        height: 10%;
     }
 
-    .botonCopiar{
-        margin: 0 auto;
-        padding: 5px;
-        width: 300px;
-        height: 100px;
-        padding-top: 30px;
+    .decrypt-input h2{
+        width: 100%;
+        height: 3svh;
+        margin-bottom: 1svh;      
     }
 
-    .btn-copiar{
-        margin-top: 0;
-        margin-bottom: 0;
-        width: 40%;
-        height: 70%;
+    .decrypt-input p{
+        width: 100%;
+        height: 3svh;
     }
 
-    footer{
+    .button-copy{
+        width: 50%;
+    }
+
+    /* ------------------------- Footer --------------------------- */
+    .footer{
         width: 100%;
         justify-content: center;
     }
 }
+
 
 /* Media queries para tablets, pantallas mayores que 600px e iguales o menores que 1024px */
 
-@media(min-width:600px) and (max-width:1023px){
+@media(min-width:600px) and (max-width:1024px){
 
-    main{
+    .header-logo{
+        width: 2svh;
+        height: 4svh;
+    }
+
+    .encoder-container{
+        width: 100%;
         margin: auto;
-        padding: 30px 30px 30px 30px;
-        width: 80%;
-        height: 700px;
+        height: 75svh;
         display: flex;
-        flex-direction: column;
+        margin: auto;
+        font-size: 1.8svh;
+        align-items: center;
+        
+    }
+
+    /* ------------------------- Encrypt Section --------------------------- */
+    .encrypt-section{
         justify-content: center;
-        font-size: 100%;
-        padding-bottom: 5px;
-    }
-
-    .seccionPrincipal{
-        width: 100%;
-        height: 600px;
-        margin-bottom: 20px;
-    }
-
-    .text-area{
-        min-width: 90%;
-        max-width: 90%;
-        min-height: 40%;
-        max-height: 40%;
-    }
-
-    .botones{
-        display: flex;
-        flex-direction: row; 
-        width: 100%;
-        padding-top: 0;
-    }
-
-    .btn-encriptar, .btn-desencriptar{
-        min-width: 40%;
-        max-width: 40%;
-        padding: 0 10px;
-        margin: 0 5%;
-        font-size: 100%;
-    }
-
-    .seccionSecundaria{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 500px;
-        margin: 0 auto;
-    }
-
-    .mensaje{
-        border: 2px solid rgba(0, 0, 0, 0.281);
-        min-width: 90%;
-        max-width: 90%;
-        min-height: 20%;
-        max-height: 30%;
-        background-image: none;
-        margin: 10px auto;
-    }
-
-    .mensaje-encontrado{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    .botonCopiar{
-        margin-top: 0;
-    }
-
-    .btn-copiar{
         width: 50%;
-        height: 70%;
+        height: 90%;
+        margin: 1svh;
     }
 
-    footer{
+    .encrypt-area{
+        width: 90%;
+        height: 95%;
+    }
+
+    .encoder-alert{
+        width: 95%;
+    }
+
+    .buttons{
+        width: 95%;
+    }
+
+    /* ------------------------- Decrypt Section --------------------------- */
+    .decrypt-section{
+        display: flex;
+        align-items: center;
+        width: 40%;
+        height: 90%;
+        margin: 1svh;
+    }
+
+    .decrypt-area{
+        width: 90%;
+        height: 95%;
+    }
+
+    .decrypt-input{
+        width: 90%;
+        height: 20%;
+    }
+
+    .decrypt-input h2{
+        width: 100%;
+        height: 5svh;
+    }
+
+    .decrypt-input p{
+        width: 100%;
+        height: 5svh;
+    }
+
+    .button-copy{
+        width: 50%;
+    }
+
+    /* ------------------------- Footer --------------------------- */
+    .footer{
         width: 100%;
         justify-content: center;
-        margin: 0;
-        padding: 0;
     }
 }
 
+/* Media queries pantallas mayores que 1024px */
+
+@media(min-width:1024px){
+    
+}
