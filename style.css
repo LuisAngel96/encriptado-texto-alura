@@ -14,7 +14,6 @@ body{
 /* ------------------------- Main --------------------------- */
 
 .encoder-container{
-    border: 2px solid green;
     display: flex;
     height: 80svh;
     justify-content: center;
