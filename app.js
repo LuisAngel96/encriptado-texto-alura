@@ -1,13 +1,18 @@
-const encryptText = document.querySelector(".encrypt-text");
-const decryptText = document.querySelector(".decrypt-text");
-const decryptInput = document.querySelector(".decrypt-input");
-const btnCopy = document.querySelector(".btn-copy");
+/* ------------------------- Keys --------------------------- */
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
 // La letra "a" es convertida para "ai"
 // La letra "o" es convertida para "ober"
 // La letra "u" es convertida para "ufat"
+
+/* ------------------------- Parameters --------------------------- */
+
+const encryptText = document.querySelector(".encrypt-text");
+const decryptText = document.querySelector(".decrypt-text");
+const decryptInput = document.querySelector(".decrypt-input");
+
+/* ------------------------- Decrypt Area --------------------------- */
 
 const showText = () => {
     if (encryptText.value === "") {
@@ -20,51 +25,40 @@ const showText = () => {
     }
 }
 
-/* ------------------------- Encrypt Function --------------------------- */
+/* ------------------------- Function Alert --------------------------- */
 
-function btnEncrypt(){
-    textExclamation();
-    showText();
-    const textEncrypt = encrypt(encryptText.value);
-    decryptText.value = textEncrypt;
-    encryptText.value = "";
+function textExclamation() {
+    const textChange = encryptText.value;
+    var regex = /^[a-z\s\d!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]+$/; // Letras minúsculas, espacios y otros caracteres especiales.
+    if (!regex.test(textChange)) {
+        
+        alert('El texto debe contener solo letras minúsculas, sin acentos ni mayúsculas.');
+        encryptText.value = "";
+    }         
 }
 
-function encrypt(stringEncrypt){
+/* ------------------------- Encrypt Function --------------------------- */
 
-    let matrixCode = [["u", "ufat"], ["i", "imes"], ["e", "enter"], ["o", "ober"], ["a", "ai"]];
-
-    stringEncrypt = stringEncrypt.toLowerCase();
-
-    for(let i = 0; i < matrixCode.length; i++){
-        if(stringEncrypt.includes(matrixCode[i][0])){
-            stringEncrypt = stringEncrypt.replaceAll(matrixCode[i][0], matrixCode[i][1]) ;
-        }
-    }
-    return stringEncrypt;
+function btnEncrypt (){
+    textExclamation();
+    showText();
+    var text = document.querySelector(".encrypt-text").value;
+    var codedText = text.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+    document.querySelector(".decrypt-text").value= codedText;
+    document.querySelector(".encrypt-text").value;
+    encryptText.value = "";
 }
 
 /* ------------------------- Decrypt Function --------------------------- */
 
-function btnDecrypt(){
+function btnDecrypt (){
     textExclamation();
     showText();
-    const textEncrypt = decrypt(encryptText.value);
-    decryptText.value = textEncrypt;
+    var text = document.querySelector(".encrypt-text").value;
+    var codedText = text.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
+    document.querySelector(".decrypt-text").value= codedText;
+    document.querySelector(".encrypt-text").value;
     encryptText.value = "";
-}
-
-function decrypt(stringDecrypt){
-
-    let matrixCode = [["u", "ufat"], ["i", "imes"], ["e", "enter"], ["o", "ober"], ["a", "ai"]];
-    stringDecrypt = stringDecrypt.toLowerCase();
-
-    for(let i = 0; i < matrixCode.length; i++){
-        if(stringDecrypt.includes(matrixCode[i][1])){
-            stringDecrypt = stringDecrypt.replaceAll(matrixCode[i][1], matrixCode[i][0]);
-        }
-    }
-    return stringDecrypt;
 }
 
 /* ------------------------- Copy Function --------------------------- */
@@ -93,18 +87,3 @@ function copy() {
         
     }
 }
-
-
-function textExclamation() {
-    const textChange = encryptText.value;
-    var regex = /^[a-z\s\d!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]+$/; // Letras minúsculas, espacios y otros caracteres especiales.
-    if (!regex.test(textChange)) {
-        
-        alert('El texto debe contener solo letras minúsculas, sin acentos ni mayúsculas.');
-        encryptText.value = "";
-    }         
-}
-
-
-
-
